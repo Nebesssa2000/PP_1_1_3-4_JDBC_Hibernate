@@ -19,10 +19,10 @@ public class Main {
 
         UserDao userDao = new UserDaoJDBCImpl();
             userDao.createUsersTable();
-            userDao.dropUsersTable();
+
             userDao.saveUser(testName,testLastName,testAge);
             System.out.println(userDao.getAllUsers());
-
+            userDao.dropUsersTable();
 
 //        try (Connection connection = getConnection();
 //             Statement statement = connection.createStatement()){

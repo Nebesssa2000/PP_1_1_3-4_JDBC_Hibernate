@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="6" name="UserServiceTest" time="8.694" errors="0" skipped="0">
+<testsuite tests="6" failures="6" name="UserServiceTest" time="3.325" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.4"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -61,10 +61,10 @@
     <property name="java.vendor.version" value="Microsoft-30338"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="UserServiceTest" name="saveUser" time="5.648">
+  <testcase classname="UserServiceTest" name="saveUser" time="2.639">
     <failure message="Во время тестирования сохранения пользователя произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1" type="java.lang.AssertionError">java.lang.AssertionError: Во время тестирования сохранения пользователя произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: Во время тестирования сохранения пользователя произошло исключение
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.saveUser(UserServiceTest.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -102,14 +102,12 @@ java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error 
 </failure>
     <system-out>Connection OK
 Connection OK
-Connection OK
-Connection OK
 </system-out>
   </testcase>
-  <testcase classname="UserServiceTest" name="removeUserById" time="1.015">
+  <testcase classname="UserServiceTest" name="removeUserById" time="0.181">
     <failure message="При тестировании удаления пользователя по id произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1" type="java.lang.AssertionError">java.lang.AssertionError: При тестировании удаления пользователя по id произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: При тестировании удаления пользователя по id произошло исключение
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.removeUserById(UserServiceTest.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -147,14 +145,12 @@ java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error 
 </failure>
     <system-out>Connection OK
 Connection OK
-Connection OK
-Connection OK
 </system-out>
   </testcase>
-  <testcase classname="UserServiceTest" name="getAllUsers" time="1.115">
+  <testcase classname="UserServiceTest" name="getAllUsers" time="0.178">
     <failure message="При попытке достать всех пользователей из базы данных произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1" type="java.lang.AssertionError">java.lang.AssertionError: При попытке достать всех пользователей из базы данных произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos;int = user.getId) VALUES (name varchar, lastName varchar, age int)&apos; at line 1
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: При попытке достать всех пользователей из базы данных произошло исключение
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.getAllUsers(UserServiceTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -192,11 +188,9 @@ java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: You have an error 
 </failure>
     <system-out>Connection OK
 Connection OK
-Connection OK
-Connection OK
 </system-out>
   </testcase>
-  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.354">
+  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.089">
     <failure message="При тестировании удаления таблицы произошло исключение
 java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: При тестировании удаления таблицы произошло исключение
 java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;
@@ -237,10 +231,9 @@ java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apo
 </failure>
     <system-out>Connection OK
 Connection OK
-Connection OK
 </system-out>
   </testcase>
-  <testcase classname="UserServiceTest" name="createUsersTable" time="0.111">
+  <testcase classname="UserServiceTest" name="createUsersTable" time="0.084">
     <failure message="При тестировании создания таблицы пользователей произошло исключение
 java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: При тестировании создания таблицы пользователей произошло исключение
 java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;
@@ -283,7 +276,7 @@ java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.
 Connection OK
 </system-out>
   </testcase>
-  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.451">
+  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.154">
     <failure message="При тестировании очистки таблицы пользователей произошло исключение
 java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;" type="java.lang.AssertionError">java.lang.AssertionError: При тестировании очистки таблицы пользователей произошло исключение
 java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table &apos;pp_1_1_3-4_jdbc_hibernate.users&apos;

@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: UserServiceTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 4.26 sec <<< FAILURE!
-saveUser(UserServiceTest)  Time elapsed: 2.539 sec  <<< FAILURE!
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.419 sec <<< FAILURE!
+saveUser(UserServiceTest)  Time elapsed: 0.975 sec  <<< FAILURE!
 java.lang.AssertionError: Во время тестирования сохранения пользователя произошло исключение
-java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" because the return value of "jm.task.core.jdbc.model.User.getAge()" is null
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.saveUser(UserServiceTest.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -40,9 +40,9 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" becau
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-removeUserById(UserServiceTest)  Time elapsed: 0.617 sec  <<< FAILURE!
+removeUserById(UserServiceTest)  Time elapsed: 0.105 sec  <<< FAILURE!
 java.lang.AssertionError: При тестировании удаления пользователя по id произошло исключение
-java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" because the return value of "jm.task.core.jdbc.model.User.getAge()" is null
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.removeUserById(UserServiceTest.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -78,9 +78,9 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" becau
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-getAllUsers(UserServiceTest)  Time elapsed: 0.662 sec  <<< FAILURE!
+getAllUsers(UserServiceTest)  Time elapsed: 0.068 sec  <<< FAILURE!
 java.lang.AssertionError: При попытке достать всех пользователей из базы данных произошло исключение
-java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" because the return value of "jm.task.core.jdbc.model.User.getAge()" is null
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.getAllUsers(UserServiceTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -116,9 +116,9 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Byte.byteValue()" becau
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-dropUsersTable(UserServiceTest)  Time elapsed: 0.251 sec  <<< FAILURE!
+dropUsersTable(UserServiceTest)  Time elapsed: 0.047 sec  <<< FAILURE!
 java.lang.AssertionError: При тестировании удаления таблицы произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.users'
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.dropUsersTable(UserServiceTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -154,9 +154,9 @@ java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-createUsersTable(UserServiceTest)  Time elapsed: 0.032 sec  <<< FAILURE!
+createUsersTable(UserServiceTest)  Time elapsed: 0.049 sec  <<< FAILURE!
 java.lang.AssertionError: При тестировании создания таблицы пользователей произошло исключение
-java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.users'
+java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.createUsersTable(UserServiceTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -192,9 +192,9 @@ java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.users
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-cleanUsersTable(UserServiceTest)  Time elapsed: 0.055 sec  <<< FAILURE!
+cleanUsersTable(UserServiceTest)  Time elapsed: 0.05 sec  <<< FAILURE!
 java.lang.AssertionError: При тестировании очистки таблицы пользователей произошло исключение
-java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.users'
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: Unknown table 'pp_1_1_3-4_jdbc_hibernate.user'
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.cleanUsersTable(UserServiceTest.java:98)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

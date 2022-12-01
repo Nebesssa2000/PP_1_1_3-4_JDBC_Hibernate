@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/PP_1_1_3-4_JDBC_Hibernate";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/my_db";
     private static final String DB_USERNAME = "Victor";
     private static final String DB_PASSWORD = "!@#My1Sql987";
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";

@@ -9,7 +9,6 @@ import java.util.List;
 import static jm.task.core.jdbc.util.Util.getConnection;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private final User user = new User();
     private final Connection connection = getConnection();
     public UserDaoJDBCImpl() {
 
@@ -30,7 +29,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void dropUsersTable() {
-        final String sql = "DROP TABLE User";
+        final String sql = "DROP TABLE if exists User";
         try(PreparedStatement prsmt = connection.prepareStatement(sql)) {
             prsmt.execute();
         } catch (SQLException e) {
@@ -51,9 +50,8 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void removeUserById(long id) {
-        final String sql = "DELETE FROM User WHERE id IN (?)";
+        final String sql = "DELETE FROM User WHERE id IN (1)";
         try(PreparedStatement prsmt = getConnection().prepareStatement(sql)) {
-            prsmt.setLong(1, user.getId());
             prsmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -64,7 +62,7 @@ public class UserDaoJDBCImpl implements UserDao {
         List<User> Userlist = new ArrayList<>();
         final String sql = "SElECT * FROM User;";
         try(PreparedStatement prsmt = getConnection().prepareStatement(sql)) {
-            ResultSet rs = prsmt.executeQuery();
+            ResultSet rs = prsmt.executeQuery(sql);
             while (rs.next()) {
                 String name = rs.getString("name");
                 String lastName = rs.getString("lastName");
